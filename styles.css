@@ -18,6 +18,8 @@ body {
     line-height: 1.3;
     height: 100vh;
     overflow: hidden;
+    position: relative;
+    background: transparent;
 }
 
 .container {
@@ -229,4 +231,13 @@ h1 {
     height: 100%;
     z-index: -1;
     background: transparent;
+}
+
+spline-viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
 } 

@@ -22,7 +22,7 @@ body {
 
 .container {
     position: relative;
-    z-index: 2;
+    z-index: 1;
     max-width: 1200px;
     margin: 0 auto;
     padding: 1.5rem;
@@ -30,6 +30,7 @@ body {
     display: flex;
     flex-direction: column;
     background: transparent;
+    pointer-events: none;
 }
 
 h1 {
@@ -66,6 +67,7 @@ h1 {
     font-size: 0.8rem;
     transition: all 0.2s ease;
     font-weight: 500;
+    pointer-events: auto;
 }
 
 .toggle-btn.active {
@@ -93,6 +95,7 @@ h1 {
     display: flex;
     flex-direction: column;
     height: 100%;
+    pointer-events: auto;
 }
 
 .card:hover {
@@ -148,6 +151,7 @@ h1 {
     margin-top: auto; /* Push to bottom */
     position: relative;
     padding: 2rem 0;
+    pointer-events: auto;
 }
 
 #user-input {
@@ -163,6 +167,7 @@ h1 {
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(8px);
     color: var(--text-color);
+    pointer-events: auto;
 }
 
 #user-input:focus {
@@ -185,6 +190,7 @@ h1 {
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
+    pointer-events: auto;
 }
 
 #submit-btn:hover {
@@ -230,7 +236,7 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: 0;
     border: none;
     pointer-events: auto;
 }
@@ -246,4 +252,23 @@ spline-viewer {
 
 .container:hover + .spline-background {
     pointer-events: none;
+}
+
+/* Enable pointer events only for interactive elements */
+.card,
+.toggle-btn,
+#user-input,
+#submit-btn,
+.input-container,
+button {
+    pointer-events: auto;
+}
+
+/* Remove any remaining backdrop filters that might interfere */
+.card,
+#user-input {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 } 

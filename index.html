@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Bias Analyzer</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.506/build/spline-viewer.js"></script>
+</head>
+<body>
+    <spline-viewer class="spline-background" url="https://my.spline.design/particlenebula-fcf6f0ed5ea07bf9058e21790dece636/"></spline-viewer>
+    <div class="container">
+        <h1>AI Bias Analyzer</h1>
+        <p class="subtitle">Clean text input source engine for AI analysis, presented for the mean to mean an average.</p>
+        
+        <div class="toggle-container">
+            <button class="toggle-btn active">MEAN</button>
+            <button class="toggle-btn">MEAN</button>
+        </div>
+
+        <div class="cards-container">
+            <div class="card left-bias">
+                <h3>Left-Leaning Sources</h3>
+                <div class="content"></div>
+                <span class="model-type">L08</span>
+            </div>
+            <div class="card center-bias">
+                <h3>Average Response</h3>
+                <div class="content"></div>
+                <span class="model-type">A9</span>
+            </div>
+            <div class="card right-bias">
+                <h3>Right-Leaning Sources</h3>
+                <div class="content"></div>
+                <span class="model-type">R08.4</span>
+            </div>
+        </div>
+
+        <div class="input-container">
+            <textarea id="user-input" placeholder="Enter your prompt for analysis..."></textarea>
+            <button id="submit-btn">+</button>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html> 
